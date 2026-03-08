@@ -69,7 +69,7 @@ const Product = () => {
                                         background: (index + 1) % 2 === 0 ? '#f1f5f9' : ' white'
                                     }}
                                 >
-                                    <td className='py-4 flex gap-4'>{order.OrderId}</td>
+                                    <td className='p-4 flex gap-4'>{order.OrderId}</td>
                                     <td>{order.CustomerName}</td>
                                     <td>{order.Email}</td>
                                     <td>{order.Mobile}</td>

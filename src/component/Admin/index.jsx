@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 const Layout = ({ children }) => {
-    const [size, setSize] = useState(0)
+    const [size, setSize] = useState(280)
     const [accountMenu, setAccountMenu] = useState(false)
     const menus = [
         {
@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
     return (
         <div className='flex'>
             <aside
-                className=' fixed top-0 left-0  h-full bg-fuchsia-500'
+                className=' fixed top-0 left-0  h-full bg-[#1B3A57]'
                 style={{
                     width: size,
                     transition: '0.3s'
@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
                 <div className='flex flex-col overflow-hidden gap-x-3 '>
                     {
                         menus.map((menu) => (
-                            <Link to={menu.link} className='py-2 px-4 font-serif text-lg hover:text-white hover:bg-rose-600'>
+                            <Link to={menu.link} className='py-2 px-4 font-serif text-lg text-white hover:text-white hover:bg-rose-600'>
                                 {menu.icon}
                                 {menu.title}
                             </Link>
@@ -65,7 +65,7 @@ const Layout = ({ children }) => {
                 <nav className='bg-white p-8 shadow-lg flex text-center  align-middle justify-between'>
                     <div className='flex gap-4 align-middle'>
                         <button onClick={() => setSize(size === 280 ? 0 : 280)}
-                            className='w-8 h-8 border-none hover:text-white hover:rounded-md hover:border-fuchsia-500 hover:bg-fuchsia-500'
+                            className='w-8 h-8 border-none hover:text-white hover:rounded-md hover:border-fuchsia-500 hover:bg-[#1B3A57]'
                         >
                             <i className="ri-menu-line text-xl font-semibold"></i>
                         </button >

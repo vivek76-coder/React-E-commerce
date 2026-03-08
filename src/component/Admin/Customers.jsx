@@ -93,7 +93,7 @@ const Customer = () => {
                                         background: (index + 1) % 2 === 0 ? '#f1f5f9' : ' white'
                                     }}
                                 >
-                                    <td className='py-4 flex gap-4'>
+                                    <td className='p-4 flex gap-4'>
                                         <div className='flex gap-4 px-4 '>
                                             <img src='/images/avatar.avif' className='w-10 h-10 rounded-full' />
                                             <div className='flex flex-col'>

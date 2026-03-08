@@ -37,7 +37,7 @@ const Payment = () => {
                                         background: (index + 1) % 2 === 0 ? '#f1f5f9' : ' white'
                                     }}
                                 >
-                                    <td className='py-4 flex gap-4'>{payment.paymentId}</td>
+                                    <td className='p-4 flex gap-4'>{payment.paymentId}</td>
                                     <td>{payment.CustomerName}</td>
                                     <td>{payment.Email}</td>
                                     <td>{payment.Mobile}</td>

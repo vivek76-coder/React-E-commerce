@@ -49,8 +49,8 @@ const Order = () => {
                 <h1 className='text-lg font-bold'>Orders</h1>
                 <table className='w-[100%] mt-6 m-auto'>
                     <thead>
-                        <tr className='bg-rose-600 text-white '>
-                            <th className='py-4 '>OrderID</th>
+                        <tr className='bg-rose-600 text-white'>
+                            <th className='py-4 text-left'>OrderID</th>
                             <th>Customer's Name</th>
                             <th>Email</th>
                             <th>Mobile</th>
@@ -69,7 +69,7 @@ const Order = () => {
                                         background: (index + 1) % 2 === 0 ? '#f1f5f9' : ' white'
                                     }}
                                 >
-                                    <td className='py-4 flex gap-4'>{order.OrderId}</td>
+                                    <td className='p-4 flex gap-4 '>{order.OrderId}</td>
                                     <td>{order.CustomerName}</td>
                                     <td>{order.Email}</td>
                                     <td>{order.Mobile}</td>
