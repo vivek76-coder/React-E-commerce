@@ -1,7 +1,35 @@
 import { useState } from 'react'
-const Layout = () => {
+import { Link, useLocation } from 'react-router-dom'
+const Layout = ({ children }) => {
     const [size, setSize] = useState(0)
     const [accountMenu, setAccountMenu] = useState(false)
+    const menus = [
+        {
+            title: 'Dashboard',
+            icon: <i class="ri-dashboard-line"></i>,
+            link: '/admin'
+        },
+        {
+            title: 'Product',
+            icon: <i class="ri-list-view"></i>,
+            link: '/admin/Product'
+        },
+        {
+            title: 'Order',
+            icon: <i class="ri-shopping-bag-line"></i>,
+            link: '/admin/Order'
+        },
+        {
+            title: 'Setting',
+            icon: <i class="ri-settings-line"></i>,
+            link: '/admin/Setting'
+        },
+        {
+            title: 'Logout',
+            icon: <i class="ri-logout-box-line"></i>,
+            link: '/admin/Logout'
+        },
+    ]
     return (
         <div className='flex'>
             <aside
@@ -11,10 +39,19 @@ const Layout = () => {
                     transition: '0.3s'
                 }}
             >
-
+                <div className='flex flex-col overflow-hidden gap-x-3 '>
+                    {
+                        menus.map((menu) => (
+                            <Link to={menu.link} className='py-2 px-4 font-serif text-lg hover:text-white hover:bg-rose-600'>
+                                {menu.icon}
+                                {menu.title}
+                            </Link>
+                        ))
+                    }
+                </div>
             </aside>
             <section
-                className='bg-gray-200 h-screen w-full '
+                className='bg-gray-200 min-h-screen w-full '
                 style={{
                     marginLeft: size,
                     transition: '0.3s'
@@ -54,6 +91,7 @@ const Layout = () => {
 
                     </div>
                 </nav>
+                {children}
             </section>
         </div>
     )
