@@ -10,6 +10,11 @@ const Layout = ({ children }) => {
             link: '/admin'
         },
         {
+            title: 'Customers',
+            icon: <i class="ri-dashboard-line"></i>,
+            link: '/admin/Customers'
+        },
+        {
             title: 'Product',
             icon: <i class="ri-list-view"></i>,
             link: '/admin/Product'
@@ -20,14 +25,14 @@ const Layout = ({ children }) => {
             link: '/admin/Order'
         },
         {
+            title: 'Payments',
+            icon: <i class="ri-settings-line"></i>,
+            link: '/admin/Payments'
+        },
+        {
             title: 'Setting',
             icon: <i class="ri-settings-line"></i>,
             link: '/admin/Setting'
-        },
-        {
-            title: 'Logout',
-            icon: <i class="ri-logout-box-line"></i>,
-            link: '/admin/Logout'
         },
     ]
     return (

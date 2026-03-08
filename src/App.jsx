@@ -4,6 +4,8 @@ import Product from './component/Admin/Product.jsx'
 import Order from './component/Admin/Order.jsx'
 import Dashboard from './component/Admin/Dashboard.jsx'
 import Setting from './component/Admin/Setting.jsx'
+import Customer from './component/Admin/Customers.jsx'
+import Payment from './component/Admin/Payment.jsx'
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +15,8 @@ function App() {
           <Route path='Order' element={<Order />} />
           <Route path='' element={<Dashboard />} />
           <Route path='Setting' element={<Setting />} />
+          <Route path='Customers' element={<Customer />} />
+          <Route path='Payments' element={<Payment />} />
         </Route>
       </Routes>
     </BrowserRouter>
